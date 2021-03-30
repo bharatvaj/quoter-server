@@ -1,9 +1,10 @@
-create table quotes(id serial primary key,
-                    quote text,
-                    author text,
-                    tags text[]);
-insert into quotes(quote, author, tags) 
-            values('Hippity Hoppity, women are property.',
+CREATE SCHEMA quoter;
+CREATE TABLE quoter.quotes(id SERIAL PRIMARY KEY,
+                    quote TEXT,
+                    author TEXT,
+                    tags TEXT[]);
+INSERT INTO quoter.quotes(quote, author, tags) 
+            VALUES('Hippity Hoppity, women are property.',
                    'Dhipauk Joquim',
-                   array ['romance', 'pedophilia']);
-select * from quotes;
+                   ARRAY['romance', 'pedophilia']);
+SELECT * FROM quoter.quotes;
